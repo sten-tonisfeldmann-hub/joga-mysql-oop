@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const articleControllerClass = require('../controllers/article');
+const ArticleController = require('../controllers/article');
 
-const articleController = new articleControllerClass();
+const articleController = new ArticleController();
 
 router.get('/', (req, res) => articleController.getAllArticles(req, res));
 router.get('/article/:slug', (req, res) => articleController.getArticleBySlug(req, res));
